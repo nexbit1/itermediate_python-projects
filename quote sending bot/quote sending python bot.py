@@ -2,8 +2,8 @@ from smtplib import SMTP
 from datetime import datetime
 import random
 
-email = 'omkar7656@yahoo.com'
-password = 'ugajedqsxqkvseez'
+email = 'testemail@yahoo.com'
+password = ''
 
 with open('quotes.txt') as data:
      x = data.readlines()
@@ -16,8 +16,8 @@ with SMTP('smtp.mail.yahoo.com') as connection:
     if now.hour == 11:
         connection.sendmail(
             from_addr=email,
-            to_addrs='omkaratagnel@gmail.com',
-            msg=f'Subject:Anime quotes\n\n {random.choice(x)}')
+            to_addrs='testemail@gmail.com',
+            msg=f'Subject:Motivational quotes\n\n {random.choice(x)}')
 
 
 
